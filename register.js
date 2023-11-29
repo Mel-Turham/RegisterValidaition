@@ -111,7 +111,7 @@ form.addEventListener('submit', (event) => {
   }
 
   const errPwdConfirm = document.querySelector('.js-pwd-confirm');
-  if (!confirmPassword.value === inputPassword.value) {
+  if (confirmPassword.value !== inputPassword.value) {
     errPwdConfirm.textContent='Vous avez saisir un mot de passe diff...'
     errPwdConfirm.style.color= '#b31312';
     confirmPassword.style.border = '2px solid #b31312';
@@ -128,6 +128,6 @@ form.addEventListener('submit', (event) => {
     
   }else{
 		profileTitle.style.color = '#b31312';
-    profileTitle.textContent = 'Photo de profile';
+    profileTitle.textContent = 'Oups profile';
   }
 });
